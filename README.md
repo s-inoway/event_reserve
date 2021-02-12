@@ -24,18 +24,18 @@
 
 ## テスト用アカウント
 ### 主催者
-| 名前   | メールアドレス   | パスワード |
+| 名前    | メールアドレス     | パスワード   |
 | ------ | ---------------- | ---------- |
-| 主催者 | shusai@gmail.com | shusa1sha  |
+| 主催者  | shusai@gmail.com | shusa1sha  |
 | a      | a@a              | aaaaaaa1   |
 ### 参加者
-| 名前   | メールアドレス  | パスワード |
+| 名前    | メールアドレス    | パスワード   |
 | ------ | --------------- | ---------- |
-| 参加者 | sanka@gmail.com | 3sankasha  |
+| 参加者  | sanka@gmail.com | 3sankasha  |
 | b      | b@b             | bbbbbbb2   |
 
 ## Basic認証
-| ユーザー名 | パスワード |
+| ユーザー名   | パスワード   |
 | ---------- | ---------- |
 | s-inoway   | 40081134   |
 
@@ -76,8 +76,6 @@
 - 入力欄
   - プロフィール画像(任意)
   - 名前(もしくは団体名)
-  - フリガナ
-  - 住所
   - 電話番号(主催する場合、イベント問い合わせ先になる)
   - メールアドレス(主催する場合、イベント問い合わせ先になる)
   - どんな活動をしているか(文章形式)
@@ -112,39 +110,61 @@
 - 掲載、参加応募するボタン
 
 ### イベント詳細ページ
-
-- リンク、ボタンなど *イベントが主催者かそうでないかでUIが変化*
+- リンク、ボタンなど *イベントが主催者かそうでないか、申し込んでいるか等でUIが変化*
   - イベント内容編集ボタン(主催者のみ)
   - イベント削除ボタン(主催者のみ)
-  - イベントに参加ボタン(主催者以外)
-  - ボタン、リンクなし(イベント終了している場合)
-- 表示 *イベントが主催者かそうでないかでUIが変化*
-  - イベント入力ページで入力できるものに加え、主催者名、問い合わせ先が表示される
-  - 
+  - イベントに参加ボタン(主催者以外、未申込)
+  - イベント参加キャンセルボタン(主催者以外、申込済)
+  - ボタン、リンクなし(申し込み期限をすぎた場合、定員に達している場合)
+- 表示 *イベント参加人数が定員に達しているかで表示が変化*
+  - イベント入力ページで入力できるものに加え、主催者の情報、問い合わせ先、現在の参加予約人数が表示される
+  - 参加人数が定員に達している場合、「定員に達しました」と表示される
 
 ### イベント編集ページ
 - UIは入力ページとほぼ同じ
 - 掲載、参加応募するボタンが変更するボタンに変わる
 
 ## データベース設計
+
 ### users table
-| Column | Type   | Options     |
-| ------ | ------ | ----------- |
-| name   | string | null: false |
-| *更新予定* | *更新予定* | *更新予定* |
+| Column             | Type   | Options                   |
+| ------------------ | ------ | ------------------------- |
+| name               | string | null: false               |
+| tel                | string | null: false               |
+| email              | string | null: false, unique: true |
+| comment            | text   |                           |
+| encrypted_password | string | null: false               |
+
 * Association
-  - *更新予定*
+  - has_many :events
+  - has_many :joins
 
 ### events table
-| Column | Type   | Options     |
-| ------ | ------ | ----------- |
-| name   | string | null: false |
-| *更新予定* | *更新予定* | *更新予定* |
+| Column            | Type       | Options                        |
+| ----------------- | ---------- | ------------------------------ |
+| user              | references | null: false, foreign_key: true |
+| title             | string     | null: false                    |
+| comment           | text       | null: false                    |
+| event_datetime    | datetime   | null: false                    |
+| meeting_datetime  | datetime   | null: false                    |
+| place_id          | integer    | null: false                    |
+| price             | integer    | null: false                    |
+| bring             | text       | null: false                    |
+| deadline_datetime | datetime   | null: false                    |
+| capacity          | integer    | null: false                    |
 * Association
-  - *更新予定*
+  - belongs_to :user
+  - has_many :joins
 
-*その他テーブル更新予定*
 
+### joins table
+| Column | Type       | Options                        |
+| ------ | ---------- | ------------------------------ |
+| user   | references | null: false, foreign_key: true |
+| event  | references | null: false, foreign_key: true |
+* association
+  - belongs_to :user
+  - belongs_to :event
 
 ## 今後実装予定の機能
 * 日付・イベントジャンル別検索機能
