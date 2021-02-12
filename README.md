@@ -130,10 +130,11 @@
 | Column             | Type   | Options                   |
 | ------------------ | ------ | ------------------------- |
 | name               | string | null: false               |
-| tel                | string | null: false               |
 | email              | string | null: false, unique: true |
-| comment            | text   |                           |
 | encrypted_password | string | null: false               |
+| tel                | string | null: false               |
+| comment            | text   |                           |
+
 
 * Association
   - has_many :events
@@ -148,7 +149,7 @@
 | event_datetime    | datetime   | null: false                    |
 | meeting_datetime  | datetime   | null: false                    |
 | place_id          | integer    | null: false                    |
-| price             | integer    | null: false                    |
+| price             | integer    |                                |
 | bring             | text       | null: false                    |
 | deadline_datetime | datetime   | null: false                    |
 | capacity          | integer    | null: false                    |
