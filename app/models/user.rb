@@ -6,7 +6,7 @@ class User < ApplicationRecord
   #has_many :events
   #has_many :joins
 
-  with_option presence: true do
+  with_options presence: true do
     validates :name
     validates :email, format: { with: /\A.+?@.+\z/ }
     validates :password, confirmation: true, length: { minimum: 8 }, format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i }
