@@ -7,7 +7,7 @@ class User < ApplicationRecord
   #has_many :joins
 
   with_options presence: true do
-    validates :name
+    validates :name, length: { maximum: 30 }
     validates :email, format: { with: /\A.+?@.+\z/ }
     validates :password, confirmation: true, length: { minimum: 8 }, format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i }
     validates :password_confirmation
