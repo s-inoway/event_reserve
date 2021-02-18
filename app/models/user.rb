@@ -13,4 +13,5 @@ class User < ApplicationRecord
     validates :password_confirmation
     validates :tel, format: { with: /\A\d{11}\z/ }
   end
+    validates :comment, length: { maximum: 200 }
 end
