@@ -1,0 +1,18 @@
+<h2>マイページ</h2>
+<ul>
+<li>名前(団体名)</li>
+<li><%= @user.name %></li>
+
+<li>電話番号</li>
+<li><%= @user.tel %></li>
+
+<li>Email</li>
+<li><%= @user.email %></li>
+
+<li>コメント</li>
+<li><%= @user.comment %></li>
+</ul>
+<ul>
+<li><%= link_to 'ユーザー情報の編集', edit_user_registration_path(@user.id) %></li>
+<li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
+<li><%= link_to 'トップに戻る', root_path %></li>
