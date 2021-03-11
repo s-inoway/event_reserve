@@ -1,18 +1,22 @@
-<h2>マイページ</h2>
-<ul>
-<li>名前(団体名)</li>
-<li><%= @user.name %></li>
+<%= render "shared/header" %>
+<div class="mypage-main">
+  <h2 class="form-header">マイページ</h2>
+  <ul class="field">
+    <li class="field-name">名前(団体名)</li>
+    <li class='mypage-field'><%= @user.name %></li>
 
-<li>電話番号</li>
-<li><%= @user.tel %></li>
+    <li class="field-name">電話番号</li>
+    <li class='mypage-field'><%= @user.tel %></li>
 
-<li>Email</li>
-<li><%= @user.email %></li>
+    <li class="field-name">Email</li>
+    <li class='mypage-field'><%= @user.email %></li>
 
-<li>コメント</li>
-<li><%= @user.comment %></li>
-</ul>
-<ul>
-<li><%= link_to 'ユーザー情報の編集', edit_user_registration_path(@user.id) %></li>
-<li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
-<li><%= link_to 'トップに戻る', root_path %></li>
+    <li class="field-name">コメント</li>
+    <li class='mypage-field'><%= @user.comment %></li>
+  </ul>
+  
+    <%= link_to 'ユーザー情報の編集', edit_user_registration_path(@user.id), class: 'actions' %>
+    <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: 'log-out' %>
+    <%= link_to '戻る', root_path, class: 'return' %>
+  </ul>
+</div>
