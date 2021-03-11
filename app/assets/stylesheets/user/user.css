@@ -40,37 +40,32 @@
 .mypage-field {
   width: 350px;
   margin-top: 5px;
-  padding: 5px 16px 24px;
+  padding: 5px 16px 30px;
 }
 
+.actions,
+.log-out,
+.return {
+  width: 322px;
+  margin-top: 40px;
+  padding: 10px 0px 8px;
+  text-align: center;
 
+}
 
 .actions {
-  width: 350px;
-  margin-top: 40px;
-  padding: 10px 16px 8px;
-  text-align: center;
   background-color: #FFA500;
   border: 1px solid #FFF;
 }
 
 .log-out {
-  width: 350px;
-  margin-top: 40px;
-  padding: 10px 16px 8px;
-  text-align: center;
   color: #FFF;
   background-color: #FF5500;
   border: 1px solid #FFF;
 }
 
 .return {
-  width: 350px;
-  padding: 10px 16px 8px;
-  display: flex;
-  justify-content: center;
-  margin-top: 35px;
-  margin-bottom: 50px;
   background-color: #CCC;
-  border: 1px solid #CCC
+  border: 1px solid #CCC;
+  margin-bottom: 50px;
 }
