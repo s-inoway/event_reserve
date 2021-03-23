@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
@@ -27,7 +29,7 @@ RSpec.describe User, type: :model do
       it '名前が30文字より多いと登録できない' do
         @user.name = 'あいうえおかきくけこさしすせそたちつてとなにぬねのまみむめもやゆよ'
         @user.valid?
-        expect(@user.errors.full_messages).to include "Name is too long (maximum is 30 characters)"
+        expect(@user.errors.full_messages).to include 'Name is too long (maximum is 30 characters)'
       end
 
       it 'emailが空だと登録できない' do
@@ -96,7 +98,7 @@ RSpec.describe User, type: :model do
         はひふへほまみむめもやゐゆゑよらりるれろわいうえをがぎぐげござじずぜぞだぢづでどばびぶべぼぱぴぷぺぽ
         あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゐゆゑよらりるれろわいうえを'
         @user.valid?
-        expect(@user.errors.full_messages).to include "Comment is too long (maximum is 200 characters)"
+        expect(@user.errors.full_messages).to include 'Comment is too long (maximum is 200 characters)'
       end
     end
   end
