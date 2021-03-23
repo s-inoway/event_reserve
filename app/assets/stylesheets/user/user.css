@@ -43,6 +43,7 @@
 
 .actions,
 .log-out,
+.delete-account,
 .return {
   width: 322px;
   margin-top: 40px;
@@ -59,6 +60,12 @@
 .log-out {
   color: #FFF;
   background-color: #FF5500;
+  border: 1px solid #FFF;
+}
+
+.delete-account {
+  color: #FFF;
+  background-color: #A50000;
   border: 1px solid #FFF;
 }
 
