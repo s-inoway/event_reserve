@@ -20,11 +20,11 @@
 
 .field-name {
   font-size: 15px;
+  text-align: left;
 }
 
 .input-field {
   width: 350px;
-  margin-top: 5px;
   padding: 10px 16px 8px;
   border: 1px solid #CCC
 }
@@ -32,14 +32,12 @@
 .text-field {
   width: 350px;
   height: 200px;
-  margin-top: 5px;
   padding: 10px 16px 8px;
   border: 1px solid #CCC;
 }
 
 .mypage-field {
   width: 350px;
-  margin-top: 5px;
   padding: 5px 16px 30px;
 }
 
