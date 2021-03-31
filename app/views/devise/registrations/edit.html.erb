@@ -25,7 +25,8 @@
     
     <div class="field">
       <div class="field-name">コメント(任意) ※200文字まで</div>
-      <%= f.text_area 'comment', class: 'text-field',placeholder:"どんな事業や活動をしているか、記入してください" %>
+      <%= f.text_area 'comment', class: 'text-field', id:'comment', placeholder:"どんな事業や活動をしているか、記入してください", maxlength:"200" %>
+      <div class="word-count">現在の文字数：<span id="word-count"></span></div>
     </div>
 
     
