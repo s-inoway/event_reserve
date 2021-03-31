@@ -1,20 +1,22 @@
 .header {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+
   background-color: #CCC;
   width: 100vw;
-  height: 10vh;
+  height:100px;
 }
 
 .header-logo {
   font-size: 25px;
   color: #000;
   font-weight: bold;
+  margin-left: 50px;
 }
 
 .header-menu {
   display: flex;
+  width: 70%;
   align-items: center;
   justify-content: space-around;
 }

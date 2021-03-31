@@ -5,6 +5,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   justify-content: center;
 }
 
@@ -38,7 +39,6 @@
   height: 200px;
   padding: 10px 16px 8px;
   border: 1px solid #CCC;
-  flex-direction:column-reverse
 }
 
 .mypage-field {
@@ -46,11 +46,16 @@
   padding: 5px 16px 30px;
 }
 
+.word-count {
+  font-size: 12px;
+  text-align: right;
+}
+
 .actions,
 .log-out,
 .delete-account,
 .return {
-  width: 322px;
+  width: 384px;
   margin-top: 40px;
   padding: 10px 0px 8px;
   text-align: center;

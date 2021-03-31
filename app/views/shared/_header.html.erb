@@ -4,7 +4,7 @@
     <li><%= link_to 'トップページ', root_path, class: 'menu-list' %></li>
     <li><%= link_to 'このページについて', '#', class: 'menu-list' %></li>
     <li><%= link_to 'イベント一覧', root_path, class: 'menu-list' %></li>
-    <li><%= link_to 'イベント投稿', new_event_path, class: 'menu-list' %></li>
+    <li><%= link_to 'イベント開催', new_event_path, class: 'menu-list' %></li>
     
     <% if user_signed_in? %>
       <li><%= link_to "#{current_user.name}さんのマイページ", user_path(current_user.id), class: 'menu-list' %></li>
