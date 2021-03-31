@@ -1,0 +1,82 @@
+.registration-main,
+.session-main,
+.user-edit-main,
+.mypage-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.error-message {
+  color: #FF0000
+}
+
+.form-header {
+  padding: 20px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.field {
+  padding: 10px;
+}
+
+.field-name {
+  font-size: 15px;
+  text-align: left;
+}
+
+.input-field {
+  width: 350px;
+  padding: 10px 16px 8px;
+  border: 1px solid #CCC
+}
+
+.text-field {
+  width: 350px;
+  height: 200px;
+  padding: 10px 16px 8px;
+  border: 1px solid #CCC;
+  flex-direction:column-reverse
+}
+
+.mypage-field {
+  width: 350px;
+  padding: 5px 16px 30px;
+}
+
+.actions,
+.log-out,
+.delete-account,
+.return {
+  width: 322px;
+  margin-top: 40px;
+  padding: 10px 0px 8px;
+  text-align: center;
+  border: 1px solid #FFF;
+
+}
+
+.actions {
+  color: #000;
+  background-color: #FFA500;
+
+}
+
+.log-out {
+  color: #FFF;
+  background-color: #FF5500;
+}
+
+.delete-account {
+  color: #FFF;
+  font-weight: bold;
+  background-color: #A50000;
+}
+
+.return {
+  color: #000;
+  background-color: #CCC;
+  margin-bottom: 50px;
+}

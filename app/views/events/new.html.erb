@@ -1,0 +1,19 @@
+<%= render "shared/header" %>
+<div class="new-event-main">
+  <div class="event-header">イベントの開催</div>
+    <%= form_with model: @event, local: true do |f| %>
+      <%= render 'shared/error_messages', model: f.object %>
+      <ul class="field">
+        <li class="field-image">イベントの画像</li>
+        <%= f.file_field :image, class:"item-image" %>
+      </div>
+    </div>
+
+      </ul>
+
+
+
+
+
+    <% end %>
+</div>
