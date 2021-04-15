@@ -1,10 +1,25 @@
 function wordCount() {
-  const comment = document.getElementById("comment");
+  const title = document.getElementById("title");
+  const titleCount = document.getElementById("title-count");
+  title.addEventListener("input", () => {
+    titleNumber = title.value.length;
+    titleCount.innerHTML = `${titleNumber}`;
+  });
 
+  // いずれ繰り返し表記をクラス使って直したい…
+
+  const comment = document.getElementById("comment");
+  const commentCount = document.getElementById("comment-count");
   comment.addEventListener("input", () => {
-    const count = comment.value.length;
-    const wordCount = document.getElementById("word-count");
-    wordCount.innerHTML = `${count}`;
+    commentNumber = comment.value.length;
+    commentCount.innerHTML = `${commentNumber}`;
+  });
+
+  const bring = document.getElementById("bring");
+  const bringCount = document.getElementById("bring-count");
+  bring.addEventListener("input", () => {
+    bringNumber = bring.value.length;
+    bringCount.innerHTML = `${bringNumber}`;
   });
 };
 
