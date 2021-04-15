@@ -1,7 +1,8 @@
 .registration-main,
 .session-main,
 .user-edit-main,
-.mypage-main {
+.mypage-main,
+.new-event-main {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -38,7 +39,7 @@
 .text-field {
   color: #532D22;
   width: 350px;
-  height: 200px;
+  height: 170px;
   padding: 10px 16px 8px;
   border: 1px solid #FDD692;
 }
@@ -46,6 +47,34 @@
 .input-field::placeholder,
 .text-field::placeholder {
   color: #DBB470;
+}
+
+.hidden-item-image {
+  display: none;
+}
+
+.item-image {
+  color: #FFF;
+  background-color: #8CD790;
+  border: 1px solid #8CD790;
+  width: 384px;
+
+  padding: 10px 0px 8px;
+  text-align: center;
+}
+
+.datetime-field,
+.time-field {
+  color: #532D22;
+  width: 384px;
+  border: 1px solid #fdd692;
+}
+
+.price-field {
+  color: #532D22;
+  width: 330px;
+  padding: 10px 16px 8px;
+  border: 1px solid #FDD692;
 }
 
 .mypage-field {
@@ -75,6 +104,8 @@
   background-color: #FDD692;
 }
 
+
+
 .log-out {
   color: #FFF;
   background-color: #FF5500;
@@ -88,6 +119,7 @@
 
 .return {
   color:#532D22;
-  background-color: #FDD692;
+  background-color: #FFF;
   margin-bottom: 50px;
+  border: 1px solid #CCC;
 }
