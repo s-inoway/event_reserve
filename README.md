@@ -142,9 +142,10 @@
 | ----------------- | ---------- | ------------------------------ |
 | user              | references | null: false, foreign_key: true |
 | title             | string     | null: false                    |
+| category_id       | integer    | null: false                    |
 | comment           | text       | null: false                    |
 | event_datetime    | datetime   | null: false                    |
-| meeting_datetime  | datetime   | null: false                    |
+| meeting_time      | time       | null: false                    |
 | place_id          | integer    | null: false                    |
 | price             | integer    |                                |
 | bring             | text       | null: false                    |
