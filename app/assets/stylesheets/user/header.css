@@ -1,28 +1,29 @@
 .header {
   display: flex;
   align-items: center;
-
-  background-color: #CCC;
+  justify-content: space-evenly;
+  background-color: #FBFFB9;
   width: 100vw;
   height:100px;
 }
 
 .header-logo {
   font-size: 25px;
-  color: #000;
+  color:#532D22;
   font-weight: bold;
-  margin-left: 50px;
+  padding: 15px;
+
 }
 
 .header-menu {
   display: flex;
   width: 70%;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .menu-list {
   font-size: 16px;
-  color: #000;
+  color:#532D22;
   padding: 15px;
 }

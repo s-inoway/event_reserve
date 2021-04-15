@@ -29,16 +29,23 @@
 }
 
 .input-field {
+  color: #532D22;
   width: 350px;
   padding: 10px 16px 8px;
-  border: 1px solid #CCC
+  border: 1px solid #FDD692;
 }
 
 .text-field {
+  color: #532D22;
   width: 350px;
   height: 200px;
   padding: 10px 16px 8px;
-  border: 1px solid #CCC;
+  border: 1px solid #FDD692;
+}
+
+.input-field::placeholder,
+.text-field::placeholder {
+  color: #DBB470;
 }
 
 .mypage-field {
@@ -59,14 +66,13 @@
   margin-top: 40px;
   padding: 10px 0px 8px;
   text-align: center;
-  border: 1px solid #FFF;
+  border: 1px solid #FDD692;
 
 }
 
 .actions {
-  color: #000;
-  background-color: #FFA500;
-
+  color:#532D22;
+  background-color: #FDD692;
 }
 
 .log-out {
@@ -81,7 +87,7 @@
 }
 
 .return {
-  color: #000;
-  background-color: #CCC;
+  color:#532D22;
+  background-color: #FDD692;
   margin-bottom: 50px;
 }
