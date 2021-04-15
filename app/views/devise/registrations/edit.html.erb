@@ -8,6 +8,7 @@
     <div class="field">
       <div class="field-name">名前(もしくは団体名) ※最大30文字</div>
       <%= f.text_field 'name', class: 'input-field', placeholder:"例) 予約太郎, イベント予約協会 など", maxlength:"30" %>
+      <div class="word-count">現在の文字数：<span id="word-count"></span></div>
     </div>
 
     
