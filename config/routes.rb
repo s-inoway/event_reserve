@@ -10,5 +10,4 @@ Rails.application.routes.draw do
   resources :users, only: [:show]
   resources :events, only: [:index, :new, :create]
   resources :abouts, only: [:index]
-
 end
