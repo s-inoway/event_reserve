@@ -13,6 +13,7 @@ class CreateEvents < ActiveRecord::Migration[6.0]
       t.integer    :price
       t.text       :bring,             null: false
       t.datetime   :deadline_datetime, null: false
+      t.integer    :capacity,          null: false
       t.timestamps                     null: false
     end
   end

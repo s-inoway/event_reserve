@@ -60,11 +60,10 @@
   height: 44px;
 }
 
-
-
 .input-field::placeholder,
 .text-field::placeholder,
-.price-field::placeholder {
+.price-field::placeholder,
+.capacity-field::placeholder {
   color: #DBB470;
 }
 
