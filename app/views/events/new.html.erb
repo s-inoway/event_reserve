@@ -12,7 +12,7 @@
 
     <div class="field">
       <div class="field-name">イベントの種類</div>
-      <%#= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box"}) %>
+      <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box"}) %>
     </div>
 
     <div class="field">
@@ -41,7 +41,7 @@
 
     <div class="field">
       <div class="field-name">開催場所</div>
-      <%#= f.collection_select(:place_id, Category.all, :id, :name, {}, {class:"select-box"}) %>
+      <%= f.collection_select(:place_id, Place.all, :id, :name, {}, {class:"select-box"}) %>
     </div>
     
     <div class="field">
@@ -62,7 +62,7 @@
 
     <div class="field">
       <div class="field-name">定員<span class="caution">(1〜20名まで)</span></div>
-      <%#= f.collection_select(:capacity_id, Category.all, :id, :name, {}, {class:"select-box"}) %>
+      <%= f.text_field 'capacity', class: 'capacity-field', placeholder:"半角数字のみ" %>名
     </div>
 
     <%= f.submit "開催する", class:"actions" %>

@@ -12,5 +12,6 @@ class Event < ApplicationRecord
     validates :place_id, numericality: { other_than: 1 }
     validates :bring
     validates :deadline_datetime
+    validates :capacity, numericality: { in: 1..20 }
   end
 end

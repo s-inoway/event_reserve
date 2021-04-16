@@ -29,20 +29,38 @@
   text-align: left;
 }
 
-.input-field {
+.input-field,
+.text-field,
+.price-field,
+.capacity-field,
+.datetime-field,
+.time-field,
+.select-box {
   color: #532D22;
-  width: 350px;
   padding: 10px 16px 8px;
-  border: 1px solid #FDD692;
+  border: 1px solid #532D22;
+}
+
+.input-field {
+  width: 350px;
 }
 
 .text-field {
-  color: #532D22;
   width: 350px;
   height: 170px;
-  padding: 10px 16px 8px;
-  border: 1px solid #FDD692;
 }
+
+.price-field,
+.capacity-field {
+  width: 330px;
+}
+
+.select-box {
+  width: 384px;
+  height: 44px;
+}
+
+
 
 .input-field::placeholder,
 .text-field::placeholder,
@@ -77,17 +95,9 @@
 
 .datetime-field,
 .time-field {
-  color: #532D22;
-  width: 384px;
-  border: 1px solid #fdd692;
+  width: 350px;
 }
 
-.price-field {
-  color: #532D22;
-  width: 330px;
-  padding: 10px 16px 8px;
-  border: 1px solid #FDD692;
-}
 
 .mypage-field {
   width: 350px;
