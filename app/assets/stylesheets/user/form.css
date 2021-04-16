@@ -56,6 +56,7 @@
 
 .item-image {
   color: #FFF;
+  cursor : pointer;
   background-color: #8CD790;
   border: 1px solid #8CD790;
   width: 384px;
@@ -107,7 +108,7 @@
   padding: 10px 0px 8px;
   text-align: center;
   border: 1px solid #FDD692;
-
+  cursor : pointer;
 }
 
 .actions {
@@ -132,5 +133,5 @@
   color:#532D22;
   background-color: #FFF;
   margin-bottom: 50px;
-  border: 1px solid #CCC;
+  border: 1px solid #532D22;
 }
