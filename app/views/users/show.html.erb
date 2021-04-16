@@ -1,22 +1,28 @@
-<%= render "shared/header" %>
 <div class="mypage-main">
   <h2 class="form-header">マイページ</h2>
-  <ul class="field">
-    <li class="field-name">名前(団体名)</li>
-    <li class='mypage-field'><%= @user.name %></li>
 
-    <li class="field-name">電話番号</li>
-    <li class='mypage-field'><%= @user.tel %></li>
+  <div class="field">
+    <div class="field-name">名前(団体名)</div>
+    <div class="mypage-field"><%= @user.name %></div>
+  </div>
 
-    <li class="field-name">Email</li>
-    <li class='mypage-field'><%= @user.email %></li>
+  <div class="field">
+    <div class="field-name">電話番号</div>
+    <div class="mypage-field"><%= @user.tel %></div>
+  </div>
 
-    <li class="field-name">コメント</li>
-    <li class='mypage-field'><%= @user.comment %></li>
-  </ul>
+  <div class="field">
+    <div class="field-name">Email</div>
+    <div class="mypage-field"><%= @user.email %></div>
+  </div>
   
-    <%= link_to 'ユーザー情報の編集', edit_user_registration_path(@user.id), class: 'actions' %>
-    <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: 'log-out' %>
-    <%= link_to 'アカウントの削除', user_registration_path, method: :delete, data: {confirm: "この操作は取り消せません。本当に削除しますか？"}, class: 'delete-account' %>
-    <%= link_to '戻る', root_path, class: 'return' %>
+  <div class="field">
+    <div class="field-name">コメント</div>
+    <div class="mypage-field"><%= @user.comment %></div>
+  </div>
+
+  <%= link_to 'ユーザー情報の編集', edit_user_registration_path(@user.id), class: "actions" %>
+  <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "log-out" %>
+  <%= link_to 'アカウントの削除', user_registration_path, method: :destroy, class: "delete-account" %>
+  <%= link_to '戻る', root_path, class: "return" %>
 </div>

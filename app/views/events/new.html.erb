@@ -1,2 +1,73 @@
 <%= render "shared/header" %>
-投稿ページ(レスト)
+
+<div class="new-event-main">
+  <h2 class="form-header">イベントの開催</h2>
+  <%= form_with model: @event, local: true do |f| %>
+    <%= render 'shared/error_messages', model: f.object %>
+
+    <div class="field">
+      <div class="field-name">イベント名</div>
+      <%= f.text_field 'title', class: 'input-field', placeholder:"最大30文字まで", maxlength:"30", id: 'title' %>
+      <div class="word-count">現在の文字数：<span id="title-count">0</span>文字</div>
+    </div>
+
+    <div class="field">
+      <div class="field-name">イベントの種類</div>
+      <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box"}) %>
+    </div>
+
+    <div class="field">
+      <div class="field-name">イベントの画像</div>
+        <div class="item-image" id="upload-btn">画像アップロード</div>
+        <%= f.file_field :image, class: "hidden-item-image", id: "hidden-btn" %>
+      <div class="image-file" id=image-file><%= image_tag "no_image.jpeg" %></div>
+      <div class="image-url" id="image-url">画像が選択されていません</div>
+    </div>
+
+    <div class="field">
+      <div class="field-name">イベントの詳細</div>
+      <%= f.text_area 'comment', class: 'text-field', placeholder:"最大200文字まで", maxlength:"200", id: 'comment' %>
+      <div class="word-count">現在の文字数：<span id="comment-count">0</span>文字</div>
+    </div>
+
+    <div class="field">
+      <div class="field-name">開催日時</div>
+      <%= f.datetime_field 'event_datetime', class: 'datetime-field' %>
+    </div>
+
+    <div class="field">
+      <div class="field-name">集合時間</div>
+      <%= f.time_field 'meeting_time', class: 'time-field' %>
+    </div>
+
+    <div class="field">
+      <div class="field-name">開催場所</div>
+      <%= f.collection_select(:place_id, Place.all, :id, :name, {}, {class:"select-box"}) %>
+    </div>
+    
+    <div class="field">
+      <div class="field-name">参加料金</div>
+      <%= f.text_field 'price', class: 'price-field', placeholder:"空欄の場合、無料になります" %>円
+    </div>
+
+    <div class="field">
+      <div class="field-name">当日の持ち物</div>
+      <%= f.text_area 'bring', class: 'text-field', placeholder:"最大200文字まで", maxlength:"200", id: 'bring' %>
+      <div class="word-count">現在の文字数：<span id="bring-count">0</span>文字</div>
+    </div>
+
+    <div class="field">
+      <div class="field-name">申し込み締切日時</div>
+      <%= f.datetime_field 'deadline_datetime', class: 'datetime-field', placeholder:"最大30文字まで", maxlength:"30" %>
+    </div>
+
+    <div class="field">
+      <div class="field-name">定員<span class="caution">(1〜20名まで)</span></div>
+      <%= f.text_field 'capacity', class: 'capacity-field', placeholder:"半角数字のみ" %>名
+    </div>
+
+    <%= f.submit "開催する", class:"actions" %>
+  <% end %>
+  <%= link_to '戻る', root_path, class:"return" %>
+
+</div>
