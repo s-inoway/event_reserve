@@ -19,7 +19,8 @@
       <div class="field-name">イベントの画像</div>
         <div class="item-image" id="upload-btn">画像アップロード</div>
         <%= f.file_field :image, class: "hidden-item-image", id: "hidden-btn" %>
-      <%#写真が表示できるようにしたい%>
+      <div class="image-file" id=image-file><%= image_tag "no_image.jpeg" %></div>
+      <div class="image-url" id="image-url">画像が選択されていません</div>
     </div>
 
     <div class="field">

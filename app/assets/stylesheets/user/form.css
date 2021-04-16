@@ -45,7 +45,8 @@
 }
 
 .input-field::placeholder,
-.text-field::placeholder {
+.text-field::placeholder,
+.price-field::placeholder {
   color: #DBB470;
 }
 
@@ -58,9 +59,19 @@
   background-color: #8CD790;
   border: 1px solid #8CD790;
   width: 384px;
-
   padding: 10px 0px 8px;
   text-align: center;
+  margin-bottom: 20px
+}
+
+.image-file>img {
+  width: 384px;
+  height: 216px;
+  object-fit: cover;
+}
+
+.image-url {
+  width: 384px;
 }
 
 .datetime-field,
