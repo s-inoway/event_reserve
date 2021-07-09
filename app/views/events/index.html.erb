@@ -23,7 +23,7 @@
               <%= event.category.name %>
             </div>
             <div class="event-datetime">
-              <%= event.event_datetime %>
+              <%= l(event.event_datetime, format: :short) %>
             </div>
             <div class="event-title">
               <%= event.title %>
