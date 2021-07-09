@@ -1,0 +1,34 @@
+.event-contents {
+  width: 100%;
+
+}
+
+.event-lists {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+	text-align: center;
+}
+
+.list {
+	width: 31%;
+}
+
+.event-img {
+width: 100%;
+height: 30%;
+object-fit: cover;
+object-position: 50% 0%;
+border: #CCC 1px solid;
+}
+
+.event-info {
+
+}
+
+.event-title {
+
+}
+.none-event {
+
+}
