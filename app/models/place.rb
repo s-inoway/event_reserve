@@ -12,4 +12,7 @@ class Place < ActiveHash::Base
     { id: 10, name: '集会室' },
     { id: 11, name: '和室' },
   ]
+
+  include ActiveHash::Associations
+  has_many :events
  end
