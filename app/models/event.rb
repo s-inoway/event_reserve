@@ -6,6 +6,7 @@ class Event < ApplicationRecord
   
   with_options presence: true do
     validates :title
+    validates :image
     validates :comment
     validates :category_id, numericality: { other_than: 1 }
     validates :event_datetime
